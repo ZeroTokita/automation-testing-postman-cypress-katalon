@@ -1,0 +1,604 @@
+{
+  "info": {
+    "_postman_id": "8acb8962-d95e-4533-a4c2-1edea61a8ab3",
+    "name": "EXAMEN_CALIDAD",
+    "description": "Colección de pruebas API para la aplicación Automation Exercise.  \nIncluye pruebas GET, POST, PUT y DELETE usando Postman.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51449407",
+    "_collection_link": "https://go.postman.co/collection/51449407-8acb8962-d95e-4533-a4c2-1edea61a8ab3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Productos",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code es 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"La respuesta no está vacía\", function () {\r",
+              "    pm.expect(pm.response.text()).to.not.be.empty;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiempo de respuesta menor a 2 segundos\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/productsList",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Usuario",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Usuario creado correctamente\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Mensaje de éxito recibido\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"Account created\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "JuanPB",
+              "type": "text",
+              "uuid": "fb46c4bc-0afd-4884-98ec-5e60c4841e68"
+            },
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "924ac9a5-01dc-48cc-8d16-5dc0a159a8f9"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text",
+              "uuid": "8ae0600b-a073-4d68-81ec-10eb2789a262"
+            },
+            {
+              "key": "title",
+              "value": "Mr",
+              "type": "text",
+              "uuid": "8d6c84df-9c22-45c6-9152-40c85f9ebf76"
+            },
+            {
+              "key": "birth_date",
+              "value": "10",
+              "type": "text",
+              "uuid": "9e0adb3d-1d6d-4aff-99fb-aae039567dda"
+            },
+            {
+              "key": "birth_month",
+              "value": "5",
+              "type": "text",
+              "uuid": "1caf3d95-c6e2-476e-a762-262dee479c2e"
+            },
+            {
+              "key": "birth_year",
+              "value": "1999",
+              "type": "text",
+              "uuid": "4bab3fa5-500c-436b-8a7a-2c786a6a2082"
+            },
+            {
+              "key": "firstname",
+              "value": "Juan",
+              "type": "text",
+              "uuid": "2acaf2d3-85a0-40cf-8824-02bc487efaf2"
+            },
+            {
+              "key": "lastname",
+              "value": "PB",
+              "type": "text",
+              "uuid": "9dc8037d-49cf-43e2-b7db-09840ea5a860"
+            },
+            {
+              "key": "company",
+              "value": "QA Company",
+              "type": "text",
+              "uuid": "0e8e7a8e-6c7e-4633-98e6-39a4f72f5be5"
+            },
+            {
+              "key": "address1",
+              "value": "Av Universitaria",
+              "type": "text",
+              "uuid": "426734a0-59c6-4d41-a821-3c960eb2da31"
+            },
+            {
+              "key": "country",
+              "value": "Ecuador",
+              "type": "text",
+              "uuid": "94180fbc-af67-4320-b931-2b33c1597023"
+            },
+            {
+              "key": "zipcode",
+              "value": "090101",
+              "type": "text",
+              "uuid": "38b54c8a-b8a3-41ea-af0d-984bbaef5ecc"
+            },
+            {
+              "key": "state",
+              "value": "Pichincha",
+              "type": "text",
+              "uuid": "4647681f-4326-429f-a39e-654f432ac1bb"
+            },
+            {
+              "key": "city",
+              "value": "Quito",
+              "type": "text",
+              "uuid": "26d3f65f-d1ee-48ab-ae78-4ad217d10da1"
+            },
+            {
+              "key": "mobile_number",
+              "value": "099999999",
+              "type": "text",
+              "uuid": "a7246a14-054e-414a-ac79-cc40843adcf5"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/createAccount",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login válido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Login exitoso\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Login exitoso\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"User exists\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "e77cf2dc-0f50-4c41-8ecc-ef75ce3d3f80"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text",
+              "uuid": "6d0039fe-35ad-405a-8945-7a87edfab48f"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/verifyLogin",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login con contraseña incorrecta",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Login fallido\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "    pm.expect(pm.response.text()).to.include(\"User not found\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "ef9aec7e-b225-41d4-bbab-093d20853e5e"
+            },
+            {
+              "key": "password",
+              "value": "1qtk9m2hew",
+              "type": "text",
+              "uuid": "8513e575-7968-4ede-a312-f2de0b8e933f"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/verifyLogin",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar cuenta",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "e8c3e6d7-4264-4c61-bf8c-fbd335f24cca"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text",
+              "uuid": "3a795be0-2163-4a3b-833f-ea834d9f4bb6"
+            },
+            {
+              "key": "city",
+              "value": "Guayaquil",
+              "type": "text",
+              "uuid": "5ffab3b8-3d24-4561-afaa-773e53c63a47"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/updateAccount",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "updateAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Borrar cuenta",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "cbfcf66b-9188-4a3f-95f0-f1ca0c700291"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text",
+              "uuid": "8fb06023-3be1-4ef5-ac05-cda68349eadd"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/deleteAccount",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "deleteAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener productos",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code es 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Respuesta contiene la propiedad products\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property(\"products\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Cada producto tiene id y name\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.products[0]).to.have.property(\"id\");\r",
+              "    pm.expect(jsonData.products[0]).to.have.property(\"name\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/productsList",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "usuario duplicado",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code es 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Sistema detecta usuario duplicado\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"Email Address already exist\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "JuanPB",
+              "type": "text",
+              "uuid": "9162f038-55bb-4030-bb4c-1601ef6326bb"
+            },
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "003afb4c-e94c-49ba-adbf-2d37c9d2baa6"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text",
+              "uuid": "326d2054-5b8a-44e7-be4c-ad7e81a9cc91"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/createAccount",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login sin contraseña",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code es 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Sistema rechaza login incompleto\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"Bad request\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "{{email}}",
+              "type": "text",
+              "uuid": "dd516dae-913f-4ac9-9359-b8517fa63be0"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "type": "text",
+              "uuid": "486b8d40-fd18-479d-b5bb-319f24f5f929"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/verifyLogin",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Usuario inexistente",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code es 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Sistema informa que el usuario no existe\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"Account not found\");\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "yakovbarcia@mail.com",
+              "type": "text",
+              "uuid": "750069a3-7952-474e-94b3-727192457d3a"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "5effc570-2fab-46e1-9570-1ffc17428167"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/deleteAccount",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "deleteAccount"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
