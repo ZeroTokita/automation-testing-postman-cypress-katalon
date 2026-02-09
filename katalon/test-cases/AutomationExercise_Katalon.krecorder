@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>AutomationExercise_Katalon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CP01_Login_View_products</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://automationexercise.com/<datalist><option>https://automationexercise.com/</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://automationexercise.com/<datalist><option>https://automationexercise.com/</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>link=Logout<datalist><option>link=Logout</option><option>xpath=//a[contains(text(),'Logout')]</option><option>xpath=//header[@id='header']/div/div/div/div[2]/div/ul/li[4]/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cart'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)=''])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Delete Account'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Test Cases'])[1]/preceding::a[2]</option><option>xpath=//*/text()[normalize-space(.)='Logout']/parent::*</option><option>xpath=//a[contains(@href, '/logout')]</option><option>xpath=//li[4]/a</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=email<datalist><option>name=email</option><option>xpath=//input[@name='email']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[2]</option><option>xpath=//input[2]</option><option>css=input[name="email"]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=email<datalist><option>name=email</option><option>xpath=//input[@name='email']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[2]</option><option>xpath=//input[2]</option><option>css=input[name="email"]</option></datalist></td><td>yakovseni28@gmail.com</td></tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>xpath=//input[@name='password']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="password"]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>xpath=//input[@name='password']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="password"]</option></datalist></td><td>prueba123</td></tr>
+<tr><td>click</td><td>xpath=//button[@type='submit']<datalist><option>xpath=//button[@type='submit']</option><option>xpath=//section[@id='form']/div/div/div/div/form/button</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Login to your account'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact us'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='OR'])[1]/preceding::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='New User Signup!'])[1]/preceding::button[1]</option><option>xpath=//*/text()[normalize-space(.)='Login']/parent::*</option><option>xpath=//button</option><option>css=button.btn.btn-default</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>link= Products<datalist><option>link= Products</option><option>xpath=//header[@id='header']/div/div/div/div[2]/div/ul/li[2]/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cart'])[1]/preceding::a[1]</option><option>xpath=//*/text()[normalize-space(.)='Products']/parent::*</option><option>xpath=//a[contains(@href, '/products')]</option><option>xpath=//li[2]/a</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 1000'])[2]/following::a[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 1000'])[2]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Add to cart'])[5]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='View Product'])[3]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 1500'])[1]/preceding::a[2]</option><option>xpath=//div[4]/div/div/div[2]/div/a</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//div[@id='cartModal']/div/div/div[2]/p[2]/a/u<datalist><option>xpath=//div[@id='cartModal']/div/div/div[2]/p[2]/a/u</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Added!'])[1]/following::u[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)=''])[1]/following::u[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Continue Shopping'])[1]/preceding::u[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 500'])[1]/preceding::u[1]</option><option>xpath=//*/text()[normalize-space(.)='View Cart']/parent::*</option><option>xpath=//u</option><option>css=u</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CP02_Registro_Usuario</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://automationexercise.com/login<datalist><option>https://automationexercise.com/login</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>name=email<datalist><option>name=email</option><option>xpath=//input[@name='email']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[2]</option><option>xpath=//input[2]</option><option>css=input[name="email"]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=email<datalist><option>name=email</option><option>xpath=//input[@name='email']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[2]</option><option>xpath=//input[2]</option><option>css=input[name="email"]</option></datalist></td><td>yakovseni28@gmail.com</td></tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>xpath=//input[@name='password']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="password"]</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>xpath=//input[@name='password']</option><option>xpath=//section[@id='form']/div/div/div/div/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="password"]</option></datalist></td><td>prueba123</td></tr>
+<tr><td>click</td><td>xpath=//button[@type='submit']<datalist><option>xpath=//button[@type='submit']</option><option>xpath=//section[@id='form']/div/div/div/div/form/button</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Login to your account'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact us'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='OR'])[1]/preceding::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='New User Signup!'])[1]/preceding::button[1]</option><option>xpath=//*/text()[normalize-space(.)='Login']/parent::*</option><option>xpath=//button</option><option>css=button.btn.btn-default</option></datalist></td><td></td></tr>
+<tr><td>open</td><td>https://automationexercise.com/<datalist><option>https://automationexercise.com/</option></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">CP03_Navegacion_Productos</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://automationexercise.com/<datalist><option>https://automationexercise.com/</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>link=Home<datalist><option>link=Home</option><option>xpath=//a[contains(text(),'Home')]</option><option>xpath=//header[@id='header']/div/div/div/div[2]/div/ul/li/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)=''])[1]/preceding::a[1]</option><option>xpath=//*/text()[normalize-space(.)='Home']/parent::*</option><option>xpath=//li/a</option><option>css=li > a</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Add to cart'])[4]/following::a[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Add to cart'])[4]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 400'])[2]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rs. 1000'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Add to cart'])[5]/preceding::a[1]</option><option>xpath=//a[contains(@href, '/product_details/2')]</option><option>xpath=//div[3]/div/div[2]/ul/li/a</option></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
